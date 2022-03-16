@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/modules/datatables/datatables.min.css" />
+    <link rel="stylesheet" href="assets/modules/select2/dist/css/select2.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="main-sidebar sidebar-style-2">
+
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="../mybusiness/dashboard.html"><img src="assets/img/jazzypay-icon.png" class="mr-2" width="30" />My Business Area</a>
+                    </div>
+                    <div class="sidebar-brand sidebar-brand-sm">
+                        <a href="../mybusiness/dashboard.html">JP</a>
+                    </div>
+                    <div class="user-widget text-center px-2 py-2 mt-5">
+                        <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                        <h5 class="mb-0 pb-0">John Smith</h5>
+                        <p>jsmith@email.com</p>
+                    </div>
+                    <hr>
+                    <ul class="sidebar-menu">
+                        <li><a class="nav-link" href="#"><i class="las la-rocket"></i><span>My Business Dashboard</span></a></li>
+                        <li><a class="nav-link" href="#"><i class="las la-edit"></i><span>Register My Business</span></a></li>
+                        <li><a class="nav-link" href="#"><i class="las la-building"></i><span>Manage My Business</span></a></li>
+                        <li><a class="nav-link" href="#"><i class="las la-wallet"></i><span>View Payments Received</span></a></li>
+                        <li><a class="nav-link" href="#"><i class="las la-receipt"></i><span>Send Payment Request</span></a></li>
+                        <li><a class="nav-link" href="#"><i class="las la-file-invoice"></i><span>View Payment Request</span></a></li>
+                        <li><a class="nav-link" href="#"><i class="las la-power-off"></i><span>Logout</span></a></li>
+                        <li><a class="nav-link" href="#"><i class="las la-external-link-alt"></i><span>Go to JazzyPay.com</span></a></li>
+                    </ul>
+                </aside>
+
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="las la-bars"></i></a>
+                        <h1 class="ml-3">View Files</h1>
+                    </div>
+
+                    <div class="section-body">
+                        <div class="business-list">
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body file-view-category">
+                                            <h6>Search by User</h6>
+                                            <form class="my-3">
+                                                <div class="form-group mb-0">
+                                                    <select class="form-control fileusersearch" required>
+                                                        <option selected></option>
+                                                        <option>Anne Gregory</option>
+                                                        <option>John Doe</option>
+                                                        <option>Robert Brown</option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                            <h6>File Categories</h6>
+                                            <div class="list-group mt-3">
+                                                <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                                                  Company Requirements
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">Payment Request File Attachements</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Voucher Banners</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Settlement Proof</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Upload Payment Requests</a>
+                                                <a href="#" class="list-group-item list-group-item-action">Upload Voucher Promotion</a>
+                                                <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Doctor Logo</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6>Files uploaded by John Doe UID-5687133</h6>
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p data-toggle="tooltip" data-placement="bottom" title="Resolution Authorizing Signatory to Register in JazzyPay">Resolution Authorizing Signatory to Register in JazzyPay</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-md-4 col-sm-6">
+                                                    <div class="gallery gallery-md">
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="las la-ellipsis-v"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item" data-toggle="modal" data-target="#view-file-modal">View</a>
+                                                                <a class="dropdown-item" href="#">Download <i class="las la-cloud-download-alt"></i></a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="gallery-box">
+                                                            <img src="../mybusiness/assets/img/file-types/docx.svg" />
+                                                        </div>
+                                                        <div class="gallery-caption">
+                                                            <a data-toggle="modal" data-target="#view-file-modal">bjd980al.docx</a>
+                                                            <p>Storefront Photo</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-footer files-footer">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p class="m-0 p-0">18 files</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <nav>
+                                                        <ul class="pagination justify-content-end">
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Previous">
+                                                                    <span aria-hidden="true"><i class="las la-angle-left"></i></span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#" aria-label="Next">
+                                                                    <span aria-hidden="true"><i class="las la-angle-right"></i></span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="view-file-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">bjd980al.docx</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" width="100%" height="600px"></iframe>
+                    <button type="button" class="btn btn-secondary mt-3">Downlaod <i class="las la-cloud-download-alt"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="assets/modules/popper.js"></script>
+    <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="assets/modules/datatables/datatables.min.js"></script>
+    <script src="assets/modules/select2/dist/js/select2.min.js"></script>
+
+    <!-- Template JS File -->
+    <script src="assets/js/datatable-setting.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/file-user-search.js"></script>
+
+</body>
+
+</html>

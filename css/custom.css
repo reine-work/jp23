@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;700&display=swap");
+html,
+body {
+  font-family: 'Muli';
+  letter-spacing: 0px !important;
+}
+
+* {
+  letter-spacing: 0px;
+}
+
+a.btn {
+  padding: 0.5rem 0.8rem;
+  font-size: 14px;
+}
+
+.btn {
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-rg {
+  height: 42px;
+}
+
+.sidebar-toggle {
+  padding-top: 5px;
+}
+
+.sidebar-toggle i {
+  font-size: 20px;
+}
+
+.main-sidebar .sidebar-brand {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  height: 59px;
+  line-height: 60px;
+  background: aliceblue;
+}
+
+.main-sidebar .sidebar-brand a {
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.main-sidebar .sidebar-menu li a.has-dropdown:after {
+  font-family: 'Line Awesome Free';
+  content: "\f107";
+}
+
+.main-sidebar .sidebar-menu li ul.dropdown-menu li a,
+.main-sidebar .sidebar-menu li a {
+  height: 40px;
+}
+
+.main-sidebar .sidebar-menu li a {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1px !important;
+}
+
+.main-sidebar .sidebar-menu li a i {
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+.main-sidebar .sidebar-menu li a.has-dropdown::after {
+  right: 25px;
+}
+
+.main-content {
+  padding-top: 5px;
+}
+
+.main-wrapper-1 .section .section-header {
+  padding: 20px;
+}
+
+.section .section-header h1 {
+  font-size: 1rem;
+}
+
+.business-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.action-links {
+  margin-top: 5px;
+}
+
+.action-links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.action-links ul li {
+  list-style: none;
+  display: inline;
+  border: none;
+  margin: 0 0.5rem 0 0;
+  padding: 0;
+}
+
+.action-links ul li a {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.media .media-title {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.intl-tel-input .input-group-text,
+.intl-tel-input select.form-control:not([size]):not([multiple]),
+.intl-tel-input .form-control:not(.form-control-sm):not(.form-control-lg) {
+  padding-left: 50px;
+}
+
+.select2 {
+  width: 100% !important;
+}
+
+#filter-collapse .form-group {
+  margin-bottom: 10px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  font-size: 0.75rem;
+  border: none;
+}
+
+.list-options .filter-gen-search {
+  float: right;
+  width: auto;
+  position: relative;
+  right: -20px;
+}
+
+@media (max-width: 767px) {
+  .list-options .total-earnings {
+    margin: 1rem 0;
+  }
+}
+
+.quick-access {
+  position: relative;
+}
+
+.quick-action-buttons {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+/*# sourceMappingURL=custom.css.map */

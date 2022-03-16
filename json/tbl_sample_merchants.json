@@ -1,0 +1,16 @@
+[{
+        "name": "Adventist Hospital Cebu (Miller Hospital)",
+        "image": "https://jazzypay-v2-dev-public.s3-ap-southeast-1.amazonaws.com/BID-2768635.jpg",
+        "city": "Pasig City"
+    },
+    {
+        "name": "Hello Dental",
+        "image": "https://jazzypay-v2-dev-public.s3-ap-southeast-1.amazonaws.com/BID-2856922.jpg",
+        "city": "Marikina"
+    },
+    {
+        "name": "Hello Tech",
+        "image": "https://jazzypay-v2-dev-public.s3-ap-southeast-1.amazonaws.com/BID-2898229.png",
+        "city": "Cebu"
+    }
+]

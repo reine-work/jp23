@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/modules/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+
+    <body>
+
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <div class="main-sidebar sidebar-style-2">
+
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="../admin/dashboard.html">
+                                <img src="assets/img/jazzypay-icon.png" width="30" />
+                                <span>My Business Area</span>
+                            </a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a href="../admin/dashboard.html">JP</a>
+                        </div>
+                        <div class="user-widget text-center px-2 py-2 mt-5">
+                            <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                            <h5 class="mb-0 pb-0">John Smith</h5>
+                            <p>jsmith@email.com</p>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li><a class="nav-link" href="dashboard.html"><i class="las la-rocket"></i><span>Dashboard</span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="las la-user"></i><span>Account Settings</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="change-password.html">Change Password</a></li>
+                                    <li><a class="nav-link" href="update-profile.html">Update Profile</a></li>
+                                    <li><a class="nav-link" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="manage-admin.html"><i class="las la-user-cog"></i><span>Manage Admins</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-comment"></i><span>Manage Contact</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-store-alt"></i><span>Manage Merchants</span></a></li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <div class="section-header">
+                            <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="las la-bars"></i></a>
+                            <h1 class="ml-3">Add a Voucher</h1>
+                        </div>
+
+                        <div class="section-body pb-5">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-5">
+
+                                    <div class="mb-5">
+                                        <h4>Add a Voucher</h4>
+                                    </div>
+
+                                    <form class="mt-2">
+
+                                        <!-- For success/error messages -->
+
+                                        <!-- <div class="alert alert-success" role="alert">
+                                            A simple success alert—check it out!
+                                        </div> -->
+
+                                        <div class="form-group">
+                                            <label>Voucher Name *</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Price *</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>Original Price</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label>Discount</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Available Quantity *</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <p class="mb-0"><strong>Multiple Voucher Claims</strong></p>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="form-group">
+                                                    <label>Is this voucher intended to be claimed multiple times (e.g. for sessions/classes)?</label>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">Yes</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group mb-0">
+                                                    <label>If yes, please indicate how many sessions/classes can be claimed with this voucher.</label>
+                                                    <input type="text" class="form-control mb-1" placeholder="Example: 8" disabled>
+                                                    <small><span class="text-danger">NOTE: </span>Please note that this specific voucher can be used or claimed multiple times by the buyer depending on the number you enter. If you want this voucher to be claimed only once but want to sell a specific number of vouchers, please fill out the "Available Quantity" field instead.</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <p class="mb-0"><strong>Voucher availability</strong></p>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="form-group">
+                                                    <label>Start selling on *</label>
+                                                    <div class="input-group">
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Stop selling on *</label>
+                                                    <div class="input-group">
+                                                        <input type="date" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <p class="mb-0"><strong>Voucher validity</strong></p>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                    <label class="form-check-label" for="exampleRadios1">
+                                                      Fixed Date
+                                                    </label>
+                                                    <div class="form-group mt-2 mb-3">
+                                                        <div class="input-group">
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                    <label class="form-check-label" for="exampleRadios2">
+                                                        No. of months from date of purchase
+                                                    </label>
+                                                    <div class="form-group mt-2">
+                                                        <select class="custom-select">
+                                                            <option value="1">3 months</option>
+                                                            <option value="2" selected>6 months</option>
+                                                            <option value="3">9 months</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="d-block">Upload Voucher Poster *</label>
+                                            <small><em>Recommended Image Dimension: 1000 x 750</em></small><br />
+                                            <small><em>Maximum File Size: 1MB</em></small>
+
+                                            <div class="form-check mt-3 mb-3">
+                                                <input class="form-check-input" type="radio" id="exampleRadios1" value="option1">
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                  Set as main image
+                                                </label>
+                                                <div class="custom-file mt-1">
+                                                    <input type="file" class="custom-file-input" id="customFile">
+                                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" id="exampleRadios1" value="option1">
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                  Set as main image
+                                                </label>
+                                                <div class="custom-file mt-1">
+                                                    <input type="file" class="custom-file-input" id="customFile">
+                                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" type="radio" id="exampleRadios1" value="option1">
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                  Set as main image
+                                                </label>
+                                                <div class="custom-file mt-1">
+                                                    <input type="file" class="custom-file-input" id="customFile">
+                                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Description *</label>
+                                            <div class="wysiwyg-vouch-desc">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Terms *</label>
+                                            <div class="wysiwyg-vouch-terms">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Terms *</label>
+                                            <div class="wysiwyg-vouch-message">
+                                            </div>
+                                        </div>
+
+                                        <div class="text-right">
+                                            <button class="btn btn-light">Cancel</button>
+                                            <button class="btn btn-secondary">Add Voucher</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Global Scripts -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script src="assets/modules/popper.js"></script>
+        <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="assets/modules/moment.min.js"></script>
+
+        <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
+        <!-- WYSIWYG Editor -->
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+        <!-- Template JS File -->
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/wysiwyg.js"></script>
+    </body>
+
+</html>

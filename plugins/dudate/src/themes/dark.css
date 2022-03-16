@@ -1,0 +1,72 @@
+.dudp__wrapper[data-theme='dark'] .dudp__calendar-header {
+  background-color: #121212;
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.current {
+  color: #1976d2;
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.in-range, .dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.range-from, .dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.range-to {
+  background-color: rgba(25, 118, 210, 0.2);
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.selected:before, .dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.range-from:before, .dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.range-to:before {
+  background-color: #1976d2;
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.selected:hover:before, .dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.range-from:hover:before, .dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.range-to:hover:before {
+  background-color: #0d47a1;
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date.disabled {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container,
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container .dudp__years-view {
+  background-color: #1D1D1D;
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container .dudp__btn-cal-prev,
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container .dudp__btn-cal-next,
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-month-year,
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__weekdays span,
+.dudp__wrapper[data-theme='dark'] .dudp__months-view .dudp__month:not(.selected),
+.dudp__wrapper[data-theme='dark'] .dudp__years-view .dudp__year:not(.selected),
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__pm,
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__nm {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__buttons .dudp__button,
+.dudp__wrapper[data-theme='dark'] .dudp__months-view .dudp__month.selected,
+.dudp__wrapper[data-theme='dark'] .dudp__years-view .dudp__year.selected {
+  color: #0d47a1;
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__buttons .dudp__button.clear {
+  color: #ef5350 !important;
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container .dudp__btn-cal-prev:hover,
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container .dudp__btn-cal-next:hover,
+.dudp__wrapper[data-theme='dark'] .dudp__buttons .dudp__button:hover,
+.dudp__wrapper[data-theme='dark'] .dudp__months-view .dudp__month:hover,
+.dudp__wrapper[data-theme='dark'] .dudp__years-view .dudp__year:hover,
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date:not(.disabled):not(.selected):not(.range-from):not(.range-to):hover:before {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container .dudp__btn-cal-prev:active,
+.dudp__wrapper[data-theme='dark'] .dudp__cal-container .dudp__btn-cal-next:active,
+.dudp__wrapper[data-theme='dark'] .dudp__buttons .dudp__button:active,
+.dudp__wrapper[data-theme='dark'] .dudp__months-view .dudp__month:active,
+.dudp__wrapper[data-theme='dark'] .dudp__years-view .dudp__year:active,
+.dudp__wrapper[data-theme='dark'] .dudp__calendar .dudp__cal-week .dudp__date:not(.disabled):not(.selected):not(.range-from):not(.range-to):active:before {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/*# sourceMappingURL=dark.css.map */

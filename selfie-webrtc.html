@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="icon" href="images/misc/jazzypay-favicon.ico" />
+
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="plugins/line-awesome/css/line-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+
+</head>
+
+<title>JazzyPay - Secure Online Payments</title>
+
+<body>
+
+    <header>
+        <div id="content-anchor"></div>
+        <div id="sticky-phantom"></div>
+        <div id="sticky">
+            <div id="main-nav">
+                <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-transparent">
+
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <div id="site-logo">
+                                <img src="images/misc/logo-jazzypay.png" id="logo" />
+                            </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">How To Pay</a></li>
+                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                            </ul>
+                            <div class="nav-cta">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
+                                    <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div id="subpage-container">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-6 col-md-8">
+                        <div class="btn-group camera-buttons" role="group">
+                            <button class="btn btn-light" data-toggle="modal" data-target="#selfie-guide-modal"><i class="las la-image"></i> Add Selfie</button>
+                            <button class="btn btn-light" data-toggle="modal" data-target="#selfie-camera-modal" id="retake-selfie" disabled><i class="las la-redo-alt"></i> Retake</button>
+                        </div>
+
+                        <div class="canvas-container mt-3">
+                            <canvas id="selfie-canvas" class="d-none"></canvas>
+                            <div class="selfie-output">
+                                <img id="selfie-rendered" alt="The captured selfie will appear in this box.">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="selfie-guide-modal" data-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="my-0 py-0" id="exampleModalLabel"><strong>Customer Identification Notice</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="las la-times"></i></span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <p>To ensure proper customer identification for KYC/AML compliance check, we require you to take a live selfie of yourself while holding a valid government ID.</p>
+
+                    <ul class="mb-4">
+                        <li>Position your face at the center of the camera while holding your ID below your chin</li>
+                        <li>Ensure that you are not blocking the important information on your ID</li>
+                        <li>Make sure you have proper lighting</li>
+                    </ul>
+
+                    <div class="text-center my-3">
+                        <img src="images/others/selfie-with-id.webp" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-secondary" data-toggle="modal" data-target="#selfie-camera-modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="selfie-camera-modal" data-backdrop="static" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="my-0 py-0" id="exampleModalLabel"><strong>Take Selfie</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="las la-times"></i></span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <div class="selfie-camera-content">
+                        <div class="camera">
+                            <video id="selfie-stream">Video stream not available.</video>
+                            <button id="capture-selfie-btn" class="btn btn-secondary" data-dismiss="modal"><i class="las la-camera"></i> Capture photo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="top">
+        <img src="images/misc/top.png" />
+    </div>
+
+    <!-- Plugins -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/selfie-camera.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

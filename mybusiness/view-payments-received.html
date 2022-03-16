@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/css/intlTelInput.css">
+
+    <body>
+
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <div class="main-sidebar sidebar-style-2">
+
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="../mybusiness/dashboard.html"><img src="assets/img/jazzypay-icon.png" class="mr-2" width="30" />My Business Area</a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a href="../mybusiness/dashboard.html">JP</a>
+                        </div>
+                        <div class="user-widget text-center px-2 py-2 mt-5">
+                            <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                            <h5 class="mb-0 pb-0">John Smith</h5>
+                            <p>jsmith@email.com</p>
+                        </div>
+                        <hr>
+                        <ul class="sidebar-menu">
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-rocket"></i><span>My Business Dashboard</span></a></li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-edit"></i><span>Register My Business</span></a></li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-building"></i><span>Manage My Business</span></a></li>
+                            <li class="active"><a class="nav-link" href="view-payments-received.html"><i class="las la-wallet"></i><span>View Payments Received</span></a></li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-receipt"></i><span>Send Payment Request</span></a></li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-file-invoice"></i><span>View Payment Request</span></a></li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-power-off"></i><span>Logout</span></a></li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-external-link-alt"></i><span>Go to JazzyPay.com</span></a></li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <div class="section-header">
+                            <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="las la-bars"></i></a>
+                            <h1 class="ml-3">Payments Received</h1>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="business-list">
+                                <div class="list-options mb-3">
+                                    <div class="d-md-flex bd-highlight">
+                                        <div class="bd-highlight mr-2">
+                                            <form class="form-inline">
+                                                <a class="btn btn-light btn-rg btn-icon icon-right" data-toggle="collapse" href="#filter-collapse">Filter <i class="las la-angle-down"></i></a>
+
+                                                <input type="search" class="form-control filter-gen-search" placeholder="Search">
+                                            </form>
+                                        </div>
+                                        <div class="ml-md-auto text-center bd-hightlight">
+                                            <select class="custom-select items-display">
+                                                <option>Items Displayed</option>
+                                                <option>10 items</option>
+                                                <option>25 items</option>
+                                                <option>50 items</option>
+                                                <option>100 items</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="filter-collapse">
+                                        <div class="card card-body mb-3">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="form-group col-lg-4 col-md-12">
+                                                        <label>Select Date</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <div class="input-group-text">
+                                                                    <i class="las la-calendar"></i>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" name="daterange" value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-lg-4 col-md-6">
+                                                        <label>Select Branches</label>
+                                                        <select class="form-control select2" multiple="">
+                                                          <option>Option 1</option>
+                                                          <option>Option 1</option>
+                                                          <option>Option 2</option>
+                                                          <option>Option 3</option>
+                                                          <option>Option 4</option>
+                                                          <option>Option 5</option>
+                                                          <option>Option 6</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-lg-4 col-md-6">
+                                                        <label>Search Customer</label>
+                                                        <select class="form-control select2" multiple="">
+                                                          <option>Option 1</option>
+                                                          <option>Option 2</option>
+                                                          <option>Option 3</option>
+                                                          <option>Option 4</option>
+                                                          <option>Option 5</option>
+                                                          <option>Option 6</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="float-right mt-1">
+                                                            <button class="btn btn-primary btn-rg mr-1">Apply Filters</button>
+                                                            <button class="btn btn-outline-primary btn-rg">Reset Filters</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="total-earnings text-lg-left">
+                                            <span class="d-block"><strong>Total Earnings</strong></span>
+                                            <span class="d-block text-success earning-amount"><strong>Php 652,000.00</strong></span>
+                                        </div>
+                                        <ul class="list-unstyled list-unstyled-border">
+                                            <li class="media business-card">
+                                                <img class="mr-3 rounded-circle" width="75" src="../images/others/sample-user.jpg" alt="product">
+                                                <div class="media-body">
+                                                    <div class="float-right">
+                                                        <div class="font-weight-600 text-danger text-small">New</div>
+                                                    </div>
+                                                    <div class="media-title">Martin Gibson</div>
+                                                    <span class="text-danger"><strong>Php 1,500.00</strong></span>
+                                                    <div class="d-lg-flex justify-content-between">
+                                                        <div class="bd-highlight mb-1">
+                                                            <div class="font-weight-300 text-muted text-small">March 19, 2020 ● 8:00 PM</div>
+                                                        </div>
+                                                        <div class="bd-highlight">
+                                                            <button class="btn btn-light btn-sm view-payment"><strong>View</strong> <i class="las la-arrow-right"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="media business-card">
+                                                <img class="mr-3 rounded-circle" width="75" src="../images/others/sample-user.jpg" alt="product">
+                                                <div class="media-body">
+                                                    <div class="float-right">
+                                                        <div class="font-weight-600 text-success text-small">Disbursed</div>
+                                                    </div>
+                                                    <div class="media-title">Martin Gibson</div>
+                                                    <span class="text-danger"><strong>Php 1,500.00</strong></span>
+                                                    <div class="d-lg-flex justify-content-between">
+                                                        <div class="bd-highlight mb-1">
+                                                            <div class="font-weight-300 text-muted text-small">March 19, 2020 ● 8:00 PM</div>
+                                                        </div>
+                                                        <div class="bd-highlight">
+                                                            <button class="btn btn-light btn-sm view-payment"><strong>View</strong> <i class="las la-arrow-right"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="media business-card">
+                                                <img class="mr-3 rounded-circle" width="75" src="../images/others/sample-user.jpg" alt="product">
+                                                <div class="media-body">
+                                                    <div class="float-right">
+                                                        <div class="font-weight-600 text-primary text-small">Refunded</div>
+                                                    </div>
+                                                    <div class="media-title">Martin Gibson</div>
+                                                    <span class="text-danger"><strong>Php 1,500.00</strong></span>
+                                                    <div class="d-lg-flex justify-content-between">
+                                                        <div class="bd-highlight mb-1">
+                                                            <div class="font-weight-300 text-muted text-small">March 19, 2020 ● 8:00 PM</div>
+                                                        </div>
+                                                        <div class="bd-highlight">
+                                                            <button class="btn btn-light btn-sm view-payment"><strong>View</strong> <i class="las la-arrow-right"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <nav class="mt-3">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Global Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+
+        <script src="assets/modules/popper.js"></script>
+        <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="assets/modules/select2/dist/js/select2.full.min.js"></script>
+        <script src="assets/modules/moment.min.js"></script>
+        <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+        <!-- Template JS File -->
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+        <!-- Global Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/js/intlTelInput.min.js"></script>
+        <script src="../js/search-loc-json.js"></script>
+        <script src="../js/merchant-registration.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>

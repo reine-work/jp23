@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<title>JazzyPay Inc.</title>
+
+<body style="background: #241e5c;background: linear-gradient(90deg, rgba(36, 30, 92, 1) 0%, rgba(81, 50, 149, 1) 100%);background-size: 100% 50%; background-repeat: no-repeat; padding: 2rem 1rem; font-family: Arial, Helvetica, sans-serif;">
+
+    <div class="email-template" style="-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);max-width: 600px;margin: 0 auto;background: #fff;border-radius: 0.25rem;border-top: solid 6px #7dc242;border-bottom: solid 1px #eee;border-right: solid 1px #eee;border-left: solid 1px #eee;">
+
+        <!-- Email header -->
+        <div class="email-header" style="padding: 2rem;border-bottom: solid 1px #eee;text-align: left;">
+            <div style="display: inline-block;max-width: 80%;">
+                <h3 style="margin: 0;padding: 0;font-weight: normal;">Payment Request from <strong>Joshua Dental</strong></h3>
+                <p style="margin: 0;padding: 4px 0 0 0;opacity: 0.5;">Request ID: 0001</p>
+            </div>
+            <div style="float: right;">
+                <img src="merchant.jpg" width="50" />
+            </div>
+        </div>
+
+        <!-- Email body -->
+        <div class="email-body" style="padding: 1rem 2rem;font-size: 10pt;">
+            <p style="line-height: 1.5;font-weight: 700;">Hi, John Doe!</p>
+            <p style="line-height: 1.5;">Joshua Dental has sent you Invoice No. 000123456 to pay via JazzyPay. Please review invoice details below. </p>
+
+            <div style="padding: 1rem;border-radius: 0.25rem;background: #f1f5f8;display: block;">
+                <div style="float: left;margin-right: 1rem;">
+                    <img src="invoice-icon.png" style="width: 30px;height: auto;" />
+                </div>
+                <div>
+                    <h2 style="margin: 0;padding: 0.25rem 0 0 0;">Php 3,495.00</h3>
+                </div>
+                <table style="text-align: left;font-size: 10pt;width: 100%;margin-top: 2rem;">
+                    <tr>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;">Invoice ID</td>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;font-weight:bold">0001</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;">Request ID</td>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;font-weight:bold">0001</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;">Date Requested</td>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;font-weight:bold">May 20, 2020</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;">Description</td>
+                        <td style="padding: 4px 4px 4px 0;vertical-align: top;font-weight:bold">Thanks for having your teeth cleaned!</td>
+                    </tr>
+                </table>
+
+                <div class="btn" style="margin: 1rem 0 0 0;text-align: center;"><a href="#" style="color: #fff;text-decoration: none;background: #7dc242;border-radius: 3px;padding: 10px 20px;display: block;margin: 0 auto;font-weight: bold;">This is a sample button/link</a></div>
+            </div>
+
+            <ul style="margin: 1rem 0 0 0;padding: 0;display: block;">
+                <!-- Details -->
+                <li style="display: inline-block; word-wrap: break-word;font-size: 9pt;list-style: none;min-width: 48%;width: 48%;vertical-align: top;">
+                    <span style="font-size: 9pt; color: #999;padding: 1rem 0;display: block;">Sent by</span>
+                    <p style="margin: 0;padding: 0; line-height: 1.5;font-weight: bold;">Joshua Dental <br/><span>(Makati Branch)</span></p>
+                    <br/>
+                    <p style="margin: 0;padding: 0; line-height: 1.5;">5th Floor, Unit 506-507, MJM Bldg., 720 JP Rizal Ave., Brgy. Valenzuela Makati City, Philippines</p>
+                    <p style="margin: 0;padding: 0; line-height: 1.5;">(02) 8994 9856 or (02) 7909 5075</p>
+                    <p style="margin: 0;padding: 0; line-height: 1.5;">joshuadental@email.com</p>
+                </li>
+
+                <li style="display: inline-block; word-wrap: break-word;font-size: 9pt;list-style: none;min-width: 48%;width: 48%;vertical-align: top;">
+                    <span style="font-size: 9pt; color: #999;padding: 1rem 0;display: block;">Sent to</span>
+                    <p style="margin: 0;padding: 0; line-height: 1.5;font-weight: bold;">Doe, John</p>
+                    <p style="margin: 0;padding: 0; line-height: 1.5;">johndoe@email.com</p>
+                    <p style="margin: 0;padding: 0; line-height: 1.5;">0917 460 7095</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Email footer -->
+        <div class="email-footer" style="padding: 0.5rem 2rem;background: #f1f5f8;margin-top: 1rem;">
+            <p style="font-size: 9pt; color: #666;line-height: 1.5;">
+                <span style="color: #f00; font-weight: bold;">NOTE:</span> You are receiving this email because [Merchant Name] has partnered with JazzyPay Inc. to provide payments and invoicing facility.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="jp-copyright" style="max-width: 600px;margin: 2rem auto 0 auto;text-align: center;">
+        <p style="font-size: 9pt; opacity: 0.5;margin: 0;padding: 0;">Powered by</p>
+        <img src="jazzypay-logo.png" style="margin-bottom: 1rem;margin-top: 0.25rem;" />
+        <p style="font-size: 9pt; opacity: 0.5;border-top: solid 1px #ccc;padding-top: 1rem;">© 2018-2020 JazzyPay, Inc. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

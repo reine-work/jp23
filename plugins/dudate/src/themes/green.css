@@ -1,0 +1,32 @@
+.dudp__wrapper[data-theme='green'] .dudp__calendar-header {
+  background-color: #2e7d32;
+}
+
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.current {
+  color: #388e3c;
+}
+
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.in-range,
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.range-from,
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.range-to {
+  background-color: rgba(56, 142, 60, 0.2);
+}
+
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.selected:before,
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.range-from:before,
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.range-to:before {
+  background-color: #388e3c;
+}
+
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.selected:hover:before,
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.range-from:hover:before,
+.dudp__wrapper[data-theme='green'] .dudp__calendar .dudp__cal-week .dudp__date.range-to:hover:before {
+  background-color: #1b5e20;
+}
+
+.dudp__wrapper[data-theme='green'] .dudp__buttons .dudp__button,
+.dudp__wrapper[data-theme='green'] .dudp__months-view .dudp__month.selected,
+.dudp__wrapper[data-theme='green'] .dudp__years-view .dudp__year.selected {
+  color: #1b5e20;
+}
+/*# sourceMappingURL=green.css.map */

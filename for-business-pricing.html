@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="icon" href="images/misc/jazzypay-favicon.ico" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/for-business.css" />
+
+</head>
+
+<title>JazzyPay - Secure Online Payments</title>
+
+<body>
+
+    <!-- <div id="privacy-popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="privacy-content">
+                        <p>By using our website and/or mobile app, you hereby give your consent to the practices described in our <a target="_blank" href="privacy.html">Privacy Notice.</a></p>
+
+                        <button class="btn btn-primary">Yes, I accept</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close-toggle"><i class="las la-times"></i></div>
+    </div> -->
+
+    <header>
+        <div id="content-anchor"></div>
+        <div id="sticky-phantom"></div>
+        <div id="sticky">
+            <div id="main-nav">
+                <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
+
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <div id="site-logo">
+                                <img src="images/misc/logo-jazzypay-color-vector.svg" id="logo" />
+                            </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="feature.html" class="nav-link">Features</a></li>
+                                <li class="nav-item active"><a href="for-business-pricing.html" class="nav-link">Pricing</a></li>
+                                <li class="nav-item"><a href="help-center.html" class="nav-link">Help</a></li>
+                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                <li class="nav-item"><a href="landing-payers.html" class="nav-link">Pay</a></li>
+                            </ul>
+                            <div class="nav-cta">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <a href="user-login.html" class="btn btn-link my-2 mr-2 my-sm-0">Sign in</a>
+                                    <a href="user-register-1.html" class="btn btn-primary my-2 my-sm-0">Sign up for Free</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="business-sub-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="pricing-content">
+                            <h2>Simple and Transparent Pricing</h2>
+                            <p>We don’t charge a setup fee, a monthly subscription fee, or impose transaction sales quota. Pay only per successful transaction and focus on growing your business.</p>
+
+                            <div class="row mt-5">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="pricing-terms">
+                                        <img src="images/others/for-business/pricing-term1.svg" />
+                                        <h6>Credit or Debit Cards</h6>
+                                        <h5>3.5% + ₱15</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="pricing-terms">
+                                        <img src="images/others/for-business/pricing-term2.svg" />
+                                        <h6>Online Banking</h6>
+                                        <h5>2.8% + ₱15</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="pricing-terms">
+                                        <img src="images/others/for-business/pricing-term3.svg" />
+                                        <h6>Digital Wallets</h6>
+                                        <h5>2.8% + ₱15</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="pricing-terms">
+                                        <img src="images/others/for-business/pricing-term4.svg" />
+                                        <h6>Over the Counter cash deposits</h6>
+                                        <h5>2.5% + ₱20</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-secondary btn-md mt-5" data-toggle="modal" data-target="#pricing-modal"><i class="las la-pencil-alt mr-3"></i> Sign up for my Business</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="pricing-calculator card">
+                            <div class="pricing-calculator-header">
+                                <h2 class="pb-3">Calculate transaction fees</h2>
+                            </div>
+                            <div class="pricing-calculator-options">
+                                <p>Select customer's payment method</p>
+
+                                <div class="radio-list">
+                                    <div class="radio-group">
+                                        <input id="radio-1" class="radio-custom" name="radio-group" type="radio">
+                                        <label for="radio-1" class="radio-custom-label">Credit Cards and Debit Cards</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input id="radio-2" class="radio-custom" name="radio-group" type="radio">
+                                        <label for="radio-2" class="radio-custom-label">Online Banking</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input id="radio-3" class="radio-custom" name="radio-group" type="radio">
+                                        <label for="radio-3" class="radio-custom-label">Digital Wallets</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input id="radio-4" class="radio-custom" name="radio-group" type="radio">
+                                        <label for="radio-4" class="radio-custom-label">Over-the-counter cash deposits</label>
+                                    </div>
+                                </div>
+
+                                <p class="mt-3">Enter Amount</p>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">₱</span>
+                                    </div>
+                                    <input type="text" class="form-control form-control-lg">
+                                </div>
+
+                                <div class="pricing-breakdown mt-3">
+                                    <p><strong>Breakdown</strong></p>
+                                    <hr>
+                                    <div class="table-responsive pricing-breakdown-table">
+                                        <table class="table table-borderless">
+                                            <tr>
+                                                <td>Transaction Fee (3.5% + ₱15)</td>
+                                                <td>₱ 15.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Net Amount</td>
+                                                <td>₱ 4,810.00</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-large">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="pricing-large-content">
+                            <h2>Large payments volume or unique business model?</h2>
+                            <p>If you’re processing a large payment volume monthly, reach out to us. Our teams will review your business and provide a customized price quote.</p>
+                            <button type="button" class="btn btn-secondary btn-md" data-toggle="modal" data-target="#pricing-modal"><i class="las la-comments mr-2"></i> Contact Sales</button>
+                            <br>
+                            <img src="images/others/for-business/pricing-large.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="pricing-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Contact Sales</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Company Name <span class="required-ast">*</span></label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Website</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>First Name <span class="required-ast">*</span></label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name <span class="required-ast">*</span></label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Position <span class="required-ast">*</span></label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Work Email Address <span class="required-ast">*</span></label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number <span class="required-ast">*</span></label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Estimated monthly volume <span class="required-ast">*</span></label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Message <span class="required-ast">*</span></label>
+                            <textarea rows="4" class="form-control"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary">Submit Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="footer-about">
+                            <img src="images/misc/logo-jazzypay-color.png" />
+                            <p class="mb-5">Make secure payments instantly from anywhere in the world</p>
+                            <ul class="social-icons pb-md-5">
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/JazzyPayPH/"><img src="images/others/facebook.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://twitter.com/jazzypayph"><img src="images/others/twitter.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/jazzypay"><img src="images/others/instagram.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/jazzypay"><img src="images/others/linkedin.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCJStymOkpbyp7bhcp0LKTVA"><img src="images/others/youtube.svg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Quicklinks</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="about.html">About</a></li>
+                                        <li class="nav-item"><a href="#">Blogs</a></li>
+                                        <li class="nav-item"><a href="#">Help Center</a></li>
+                                        <li class="nav-item"><a href="#">Video Center</a></li>
+                                        <li class="nav-item"><a href="#">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Others</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="terms.html">Terms and Conditions</a></li>
+                                        <li class="nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                                        <li class="nav-item"><a href="contact.html">Email us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Account</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="terms.html">Sign Up</a></li>
+                                        <li class="nav-item"><a href="privacy.html">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="footer-links">
+                                    <h5>Download the app</h5>
+                                    <div class="app-btn">
+                                        <a href="https://apps.apple.com/us/app/jazzypay/id1250715169" target="_blank"><img src="images/others/download-app-store.svg" /></a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.jazzypay.androapp&hl=en" target="_blank"><img src="images/others/download-play-store.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 order-2 order-lg-1">
+                        <div class="copyright text-lg-left">
+                            <p>© 2020 JazzyPay, Inc. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 order-1 order-lg-2">
+                        <div class="partner-logos text-lg-right">
+                            <p class="d-lg-inline text-lg-right mr-1">You are safe with JazzyPay</p>
+                            <img src="images/others/partners/hackerproof.png" />
+                            <img src="images/others/partners/pci-colored.png" />
+                            <img src="images/others/partners/sisa-logo-dark.png" />
+                            <img src="images/others/partners/sectigo.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="top">
+        <img src="images/misc/top.png" />
+    </div>
+
+    <!-- Plugins -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/line-awesome/css/line-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+
+    <script src="js/partner-slider.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+
+</body>
+
+</html>

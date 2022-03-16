@@ -1,0 +1,776 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="icon" href="images/misc/jazzypay-favicon.ico" />
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<title>JazzyPay - Secure Online Payments</title>
+
+<body>
+
+    <header>
+        <div id="content-anchor"></div>
+        <div id="sticky-phantom"></div>
+        <div id="sticky">
+            <div id="main-nav">
+                <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-transparent">
+
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <div id="site-logo">
+                                <img src="images/misc/logo-jazzypay.png" id="logo" />
+                            </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">How To Pay</a></li>
+                                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                            </ul>
+                            <div class="nav-cta">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <a href="user-my-profile.html" class="btn btn-outline-light my-2 mr-2 my-sm-0"><i class="las la-lock"></i> Sign In</a>
+                                    <a href="for-business.html" class="btn btn-light my-2 my-sm-0"><i class="las la-briefcase"></i> JazzyPay for Business</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div id="subpage-container">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="landing-page-content mt-3">
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <nav class="api-doc-sidebar">
+                                        <div class="landing-page-header">
+                                            <h2 class="about-big-text">API Guide</h2>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <a class="sb-menu" href=" #apisec-intro "><strong>Introduction</strong></a>
+                                            </li>
+                                            <li>
+                                                <a class="sb-menu" href="#apisec-initialize-payment"><strong>Initialize Payment</strong></a>
+                                                <ul>
+                                                    <li><a class="sb-menu" href=" #apisec-endpoint ">Endpoint</a></li>
+                                                    <li><a class="sb-menu" href="#apisec-protocol-method">Protocol/Method</a>
+                                                    </li>
+                                                    <li><a class="sb-menu" href=" #apisec-header-para ">Header Parameters - Request</a></li>
+                                                    <li><a class="sb-menu" href="#apisec-body-para">Body Parameters - Request</a>
+                                                    </li>
+                                                    <li><a class="sb-menu" href=" #apisec-sample-request ">Sample Request</a></li>
+                                                    <li><a class="sb-menu" href="#apisec-body-para-res">Body Parameters - Response</a>
+                                                    </li>
+                                                    <li><a class="sb-menu" href=" #apisec-sample-response ">Sample Response</a></li>
+                                                    <li><a class="sb-menu" href="#apisec-sample-payment-form">Sample Payment Form </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="sb-menu" href=" #apisec-query-payment "><strong>Query Payment</strong></a>
+                                                <ul>
+                                                    <li><a class="sb-menu" href="#apisec-query-endpoint">Endpoint</a>
+                                                    </li>
+                                                    <li><a class="sb-menu" href=" #apisec-protocol ">Protocol/Method</a></li>
+                                                    <li><a class="sb-menu" href="#apisec-header-para-req">Header Parameters - Request</a>
+                                                    </li>
+                                                    <li><a class="sb-menu" href=" #apisec-body-para-req ">Body Parameters - Request</a></li>
+                                                    <li><a class="sb-menu" href="#apisec-sample-req">Sample Request</a>
+                                                    </li>
+                                                    <li><a class="sb-menu" href=" #apisec-query-body-para-res ">Body Parameters - Response</a></li>
+                                                    <li><a class="sb-menu" href="#apisec-sample-res">Sample Response </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#"><strong>APPENDIX A: Error Response Codes</strong></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="api-doc-content" id="apisec-intro">
+                                        <h4 class="my-3">Introduction</h4>
+                                        <p>This document is intended for software integrators developing platforms that leverage web payment services. </p>
+
+                                        <p>JazzyPay REST API provides the integrator a way to initiate a payment without leaving their own website. The partner merchant sends an Initiate Request to JazzyPay, and JazzyPay will send a URL of the payment form
+                                            page to be rendered by the partner merchant.</p>
+
+                                        <p>The payment form page allows the payor to select from 27 payment methods. After the payment is successful, JazzyPay will redirect the payor to the partner merchant’s page. JazzyPay will also send an SMS and email
+                                            to the payor and merchant to inform them of the payment status.</p>
+
+                                        <h4 class="my-3">Payment Sequence Diagram</h4>
+                                        <img src="images/others/payment-seq-diagram.jpeg" />
+
+                                        <div id="apisec-initialize-payment">
+                                            <h4 class="my-3">Initialize Payment</h4>
+
+                                            <p>Initialize Payment is the main API to create a transaction. On successful request, this will return an HTML5 URL that the partner merchant will use to redirect payors to JazzyPay’s payment form page.</p>
+                                        </div>
+
+                                        <div id="apisec-endpoint" class="p5rem">
+                                            <h4 class="my-3">Endpoint</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code><base path>/api/payment/initialize</code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-protocol-method" class="p5rem">
+                                            <h4 class="my-3">Protocol Method</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code>HTTPS POST</code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-header-para" class="p5rem">
+                                            <h4 class="my-3">Header Parameters - Request</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table-sm table-bordered" width="100%">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Type</th>
+                                                            <th scope="col">Required</th>
+                                                            <th scope="col">Sample</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>client-id</td>
+                                                            <td>Client ID provided by JazzyPay, to identify partner merchant</td>
+                                                            <td>String</td>
+                                                            <td>M</td>
+                                                            <td>3434ec97-8a1b-4b42-9117-0944fc45ece8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>client-secret</td>
+                                                            <td>Client secret key, provided by JazzyPay and paired with the Client ID</td>
+                                                            <td>String</td>
+                                                            <td>M</td>
+                                                            <td>@K4MYtsku#zY!NbY</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Content-Type</td>
+                                                            <td>To indicate the type of request sent from the client to the server.</td>
+                                                            <td>String</td>
+                                                            <td>M</td>
+                                                            <td>application/json</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-body-para" class="p5rem">
+                                            <h4 class="my-3">Body Parameters - Request</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table-sm table-bordered" width="100%">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Type</th>
+                                                            <th scope="col">Sample</th>
+                                                            <th scope="col">Required</th>
+                                                            <th scope="col">Sample</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>firstName</td>
+                                                            <td>First name</td>
+                                                            <td>String</td>
+                                                            <td>128</td>
+                                                            <td>M</td>
+                                                            <td>Juan</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>lastName</td>
+                                                            <td>Last name</td>
+                                                            <td>String</td>
+                                                            <td>128</td>
+                                                            <td>M</td>
+                                                            <td>Dela Cruz</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>email</td>
+                                                            <td>Email address</td>
+                                                            <td>String</td>
+                                                            <td>128</td>
+                                                            <td>M</td>
+                                                            <td>juandelacruz@gmail.com</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>phoneCode</td>
+                                                            <td>Phone number country code</td>
+                                                            <td>Numeric</td>
+                                                            <td>1-4</td>
+                                                            <td>M</td>
+                                                            <td>63</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>phoneNumber</td>
+                                                            <td>Phone number without country code</td>
+                                                            <td>Numeric</td>
+                                                            <td>10</td>
+                                                            <td>M</td>
+                                                            <td>9475816332</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>amount</td>
+                                                            <td>Amount to be paid in Philippine peso</td>
+                                                            <td>Amount</td>
+                                                            <td>/</td>
+                                                            <td>M</td>
+                                                            <td>2500.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>description</td>
+                                                            <td>Payment description</td>
+                                                            <td>String</td>
+                                                            <td>128</td>
+                                                            <td>M</td>
+                                                            <td>Checkup</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>traceNo</td>
+                                                            <td>Partner merchant’s generated transaction number. It must be unique in every transaction.</td>
+                                                            <td>String (Alpha-numeric characters, as well as dashes and underscores)</td>
+                                                            <td>64</td>
+                                                            <td>M</td>
+                                                            <td>ABC10000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>successUrl</td>
+                                                            <td>Webpage URL to redirect payor after successful transaction</td>
+                                                            <td>String</td>
+                                                            <td>512</td>
+                                                            <td>M</td>
+                                                            <td>http://example.com/sucessful</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>cancelUrl</td>
+                                                            <td>Webpage URL to redirect payor after a failed transaction</td>
+                                                            <td>String</td>
+                                                            <td>512</td>
+                                                            <td>M</td>
+                                                            <td>http://example.com/failed
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-sample-request" class="p5rem">
+                                            <h4 class="my-3">Sample Request</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code>
+                                                    POST<br/><br/>
+
+                                                    Headers<br/>
+                                                    Content-Type: application/json<br/>
+                                                    client-id: 3434ec97-8a1b-4b42-9117-0944fc45ece8<br/>
+                                                    client-secret: @K4MYtsku#zY!NbY<br/>
+
+                                                    Body<br/><br/>
+                                                    {<br/>
+                                                        "firstName": "Juan",<br/>
+                                                        "lastName": "Dela Cruz",<br/>
+                                                        "email": "juandelacruz@gmail.com",<br/>
+                                                        "phoneCode": "63",<br/>
+                                                        "phoneNumber": "9475816332",<br/>
+                                                        "amount": 2500.00,<br/>
+                                                        "description": "Checkup",<br/>
+                                                        "traceNo": "ABC10000",<br/>
+                                                        "successUrl": "http://example.com/sucessful",<br/>
+                                                        "cancelUrl": "http://example.com/failed"<br/>
+                                                    }
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-body-para-res" class="p5rem">
+                                            <h4 class="my-3">Body Parameters - Response</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table-sm table-bordered" width="100%">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Type</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>status</td>
+                                                            <td>
+                                                                The state of the Initialize Payment call.
+
+                                                                <br/><br/>
+
+                                                                <strong>Success</strong> - request to Initiate Payment was successful.
+
+                                                                <br/>
+
+                                                                <strong>Failed</strong> - request to Initiate Payment did not go through
+                                                            </td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>traceNo</td>
+                                                            <td>Partner merchant’s submitted transaction number</td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>referenceNo</td>
+                                                            <td>JazzyPay’s reference number. You can use this to check the transaction details using Query Payment API</td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>redirectUrl</td>
+                                                            <td>JazzyPay’s payment form URL</td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-sample-response" class="p5rem">
+                                            <h4 class="my-3">Sample Response</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code>
+                                                    {<br />
+                                                        "status": "Success",<br />
+                                                        "traceNo": "ABC10000",<br />
+                                                        "referenceNo": "APR-1458145",<br />
+                                                        "redirectUrl": "https://epikpay.com/payment/form/BID-10483270/redirect?client_id=100200&code=kjTMnKdQWfiZ81sf6lUmLDNNVCVFTa"<br />
+                                                    }                                                    
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-sample-payment-form" class="p5rem">
+                                            <h4 class="my-3">Sample Payment Form</h4>
+
+                                            <p>When a payor is sent to redirectUrl from Initiate Payment response, they should see a form with the details from the request. </p>
+
+                                            <p>Upon completion of payment transaction, payor will be redirected back to partner merchants page.</p>
+
+                                            <img src="images/others/sample-payment-form.png" />
+                                        </div>
+
+                                        <div id="apisec-query-payment" class="p5rem">
+                                            <h4 class="my-3">Query Payment</h4>
+
+                                            <p>Query Payment is an on-demand API. After an Initiate Payment call, partner merchants can use this API to check the transaction details from JazzyPay. </p>
+                                        </div>
+
+                                        <div id="apisec-query-endpoint" class="p5rem">
+                                            <h4 class="my-3">Endpoint</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code>
+                                                    <base path>/api/payment/query                                                   
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-protocol" class="p5rem">
+                                            <h4 class="my-3">Protocol/Method</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code>
+                                                    HTTPS POST                                                
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-header-para-req" class="p5rem">
+                                            <h4 class="my-3">Header Parameters - Request</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table-sm table-bordered" width="100%">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Type</th>
+                                                            <th scope="col">Required</th>
+                                                            <th scope="col">Sample</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>client-id</td>
+                                                            <td>Client ID provided by JazzyPay, to identify partner merchant</td>
+                                                            <td>String</td>
+                                                            <td>M</td>
+                                                            <td>3434ec97-8a1b-4b42-9117-0944fc45ece8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>client-secret</td>
+                                                            <td>Client secret key, provided by JazzyPay and paired with the Client ID</td>
+                                                            <td>String</td>
+                                                            <td>M</td>
+                                                            <td>@K4MYtsku#zY!NbY</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Content-Type</td>
+                                                            <td>To indicate the type of request sent from the client to the server.</td>
+                                                            <td>String</td>
+                                                            <td>M</td>
+                                                            <td>application/json</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-body-para-req" class="p5rem">
+                                            <h4 class="my-3">Header Parameters - Request</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table-sm table-bordered" width="100%">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Type</th>
+                                                            <th scope="col">Length</th>
+                                                            <th scope="col">Required</th>
+                                                            <th scope="col">Sample</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>referenceNo</td>
+                                                            <td>The reference number returned from the Initiate Payment API call</td>
+                                                            <td>String</td>
+                                                            <td>128</td>
+                                                            <td>M</td>
+                                                            <td>APR-1458145</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-sample-req" class="p5rem">
+                                            <h4 class="my-3">Sample Response</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code>
+                                                    POST <br/><br/>
+
+                                                    Headers<br/>
+                                                    Content-Type: application/json<br/>
+                                                    client-id: 3434ec97-8a1b-4b42-9117-0944fc45ece8<br/>
+                                                    client-secret: @K4MYtsku#zY!NbY<br/><br/>
+
+                                                    Body<br/>
+                                                    {<br/>
+                                                    "referenceNo": "APR-1458145"<br/>
+                                                    }                                                
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-query-body-para-res" class="p5rem">
+                                            <h4 class="my-3">Body Parameters - Response</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table-sm table-bordered" width="100%">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th scope="col">Name</th>
+                                                            <th scope="col">Description</th>
+                                                            <th scope="col">Type</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>status</td>
+                                                            <td>
+                                                                The state of the Query Payment call.<br /><br />
+
+                                                                <strong>Success</strong> - request to Query Payment was successful<br />
+                                                                <strong>Failed</strong> - request to Query Payment did not go through
+                                                            </td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>referenceNo</td>
+                                                            <td>JazzyPay’s reference number</td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>paymentStatus</td>
+                                                            <td>
+                                                                Payment status.<br /><br />
+
+                                                                <strong>Success</strong> - the payor successfully made payment<br />
+                                                                <strong>Failed</strong> - the payor attempts to pay but encountered an error<br />
+                                                                <strong>Pending</strong> - the payor selected an Over-the-Counter payment type
+                                                            </td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>paymentMethod</td>
+                                                            <td>Payment method payor selected</td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>paymentType</td>
+                                                            <td>Payment type</td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>amount</td>
+                                                            <td>Amount to be paid by the payor</td>
+                                                            <td>Amount</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>total</td>
+                                                            <td>The total amount charged to the payor</td>
+                                                            <td>Amount</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>currency</td>
+                                                            <td>Payment amount currency. Defaults to “PHP” for Philippine Peso</td>
+                                                            <td>String</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>date</td>
+                                                            <td>Date of the transaction</td>
+                                                            <td>Datetime</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-sample-res" class="p5rem">
+                                            <h4 class="my-3">Sample Response</h4>
+
+                                            <div class="card bg-light p-2">
+                                                <code>
+                                                    {<br />
+                                                        "status": "Success",<br />
+                                                        "referenceNo": "APR-1458145",<br />
+                                                        "paymentStatus": "Success",<br />
+                                                        "paymentMethod": "Credit Card - Mastercard",<br />
+                                                        "paymentType": "Card",<br />
+                                                        "amount": 2500,<br />
+                                                        "total": 2540,<br />
+                                                        "currency": "PHP",<br />
+                                                        "date": "2021-03-03T10:19:32.000Z"<br />
+                                                    }                                                                                                
+                                                </code>
+                                            </div>
+                                        </div>
+
+                                        <div id="apisec-appendix-a" class="p5rem">
+                                            <h4 class="my-3">APPENDIX A: Error Response Codes</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table-sm table-bordered" width="100%">
+                                                    <thead class="bg-light">
+                                                        <tr>
+                                                            <th scope="col">Code</th>
+                                                            <th scope="col">Status</th>
+                                                            <th scope="col">Remarks</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>CLIENT_AUTH_FAILED</td>
+                                                            <td>F</td>
+                                                            <td>Client authentication failed</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PARAM_MISSING_OR_INVALID</td>
+                                                            <td>F</td>
+                                                            <td>One or more mandatory parameters is/are not valid/missing</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>TRANSACTION_NOT_EXIST</td>
+                                                            <td>F</td>
+                                                            <td>Transaction does not exist</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>TRANSACTION_PENDING</td>
+                                                            <td>F</td>
+                                                            <td>The payor did not attempt to pay</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>INVALID_TRACE_NO</td>
+                                                            <td>F</td>
+                                                            <td>Trace number submitted is invalid or not unique</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="footer-about">
+                            <img src="images/misc/logo-jazzypay.png" />
+                            <p class="mb-5">Make secure payments from anywhere in the world!</p>
+                            <ul class="social-icons">
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/JazzyPayPH/"><img src="images/others/facebook.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://twitter.com/jazzypayph"><img src="images/others/twitter.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/jazzypay"><img src="images/others/instagram.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.linkedin.com/company/jazzypay"><img src="images/others/linkedin.svg"></a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.youtube.com/channel/UCJStymOkpbyp7bhcp0LKTVA"><img src="images/others/youtube.svg"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Quicklinks</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="about.html">About</a></li>
+                                        <li class="nav-item"><a href="blog-list.html">Blogs</a></li>
+                                        <li class="nav-item"><a href="help-center.html">Help Center</a></li>
+                                        <li class="nav-item"><a href="video-center.html">Video Center</a></li>
+                                        <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Others</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="landing-page-payment-request.html">Payment Requests</a></li>
+                                        <li class="nav-item"><a href="landing-page-referral-program.html">Referral Programs</a></li>
+                                        <li class="nav-item"><a href="landing-page-requirements.html">Legal Requirements</a></li>
+                                        <li class="nav-item"><a href="terms.html">Terms and Conditions</a></li>
+                                        <li class="nav-item"><a href="privacy.html">Privacy Policy</a></li>
+                                        <li class="nav-item"><a href="contact.html">Email us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4">
+                                <div class="footer-links">
+                                    <h5>Account</h5>
+                                    <ul>
+                                        <li class="nav-item"><a href="user-register-1.html">Sign Up</a></li>
+                                        <li class="nav-item"><a href="user-login.html">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="footer-links">
+                                    <h5>Download the app</h5>
+                                    <div class="app-btn">
+                                        <a href="https://apps.apple.com/us/app/jazzypay/id1250715169" target="_blank"><img src="images/others/download-app-store.svg" /></a>
+                                        <a href="https://play.google.com/store/apps/details?id=com.jazzypay.androapp&hl=en" target="_blank"><img src="images/others/download-play-store.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 order-2 order-lg-1">
+                        <div class="copyright text-lg-left">
+                            <p>© 2020 JazzyPay, Inc. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 order-1 order-lg-2">
+                        <div class="partner-logos text-lg-right">
+                            <p class="d-lg-inline text-lg-right mr-1">You are safe and secure with JazzyPay!</p>
+                            <img src="images/others/partners/hackerproof.png" />
+                            <img src="images/others/partners/pci.png" />
+                            <img src="images/others/partners/sisa-security.png" />
+                            <img src="images/others/partners/sectigo.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="top">
+        <img src="images/misc/top.png" />
+    </div>
+
+    <!-- Plugins -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/line-awesome/css/line-awesome.min.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

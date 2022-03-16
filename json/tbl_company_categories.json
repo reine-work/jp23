@@ -1,0 +1,72 @@
+[{
+        "category_name": "Auto Detailing Services",
+        "category_tags": "Auto Detailing Services"
+    },
+    {
+        "category_name": "Beauty and Wellness",
+        "category_tags": [
+            "Massage",
+            "Salon",
+            "Spa"
+        ]
+    },
+    {
+        "category_name": "Fitness Centers",
+        "category_tags": "Fitness Centers"
+    },
+    {
+        "category_name": "Clinics",
+        "category_tags": [
+            "Dental",
+            "Diagnostic",
+            "EENT",
+            "Maternity",
+            "Medical",
+            "Polyclinic",
+            "Optical",
+            "Pediatric",
+            "Veterinary",
+            "Facial"
+        ]
+    },
+    {
+        "category_name": "Hospitals",
+        "category_tags": "Hospitals"
+    },
+    {
+        "category_name": "Schools",
+        "category_tags": [
+            "Preschool",
+            "Elementary",
+            "High School",
+            "Vocational",
+            "College and Universities",
+            "Special Education",
+            "Review and Training Centers",
+            "Special Education"
+        ]
+    },
+    {
+        "category_name": "Special Care Centers",
+        "category_tags": [
+            "Mental",
+            "Rehabilitation",
+            "Retirement Home"
+        ]
+    },
+    {
+        "category_name": "Others",
+        "category_tags": [
+            "Death Care",
+            "Suppliers",
+            "Others",
+            "Laboratory"
+        ]
+    },
+    {
+        "category_name": "Travel Agencies",
+        "category_tags": [
+            "Travel Agency"
+        ]
+    }
+]

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/css/intlTelInput.css">
+
+    <body>
+
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <div class="main-sidebar sidebar-style-2">
+
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="../mybusiness/dashboard.html"><img src="assets/img/jazzypay-icon.png" class="mr-2" width="30" />My Business Area</a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a href="../mybusiness/dashboard.html">JP</a>
+                        </div>
+                        <div class="user-widget text-center px-2 py-2 mt-5">
+                            <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                            <h5 class="mb-0 pb-0">John Smith</h5>
+                            <p>jsmith@email.com</p>
+                        </div>
+                        <hr>
+                        <ul class="sidebar-menu">
+                            <li class="menu-header">Starter</li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="las la-briefcase"></i><span>My Business</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="manage-business.html">Manage Business</a></li>
+                                    <li><a class="nav-link" href="register-business.html">Register New Business</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-credit-card"></i><span>View Payments</span></a></li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="las la-receipt"></i><span>Manage Invoice</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="send-invoice.html">Send Invoice</a></li>
+                                    <li><a class="nav-link" href="view-payments-received.html">View Sent Invoice</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="#"><i class="las la-power-off"></i><span>Log out</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-external-link-alt"></i><span>Go to JazzyPay.com</span></a></li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <div class="section-header">
+                            <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="las la-bars"></i></a>
+                            <h1 class="ml-3">Payment Details</h1>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="bd-highlight">
+                                            <h6 class="pt-1">Payment ID: XYZ123456</h6>
+                                        </div>
+                                        <div class="bd-highlight">
+                                            <button class="btn btn-light btn-sm btn-icon"><i class="las la-arrow-left"></i> Back to List</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card payment-details">
+                                        <div class="card-body">
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Customer Name</div>
+                                                <div class="bd-highlight">
+                                                    <strong>John Doe</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Customer Email</div>
+                                                <div class="bd-highlight">
+                                                    <strong>johndoe@email.com</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Customer Mobile</div>
+                                                <div class="bd-highlight">
+                                                    <strong>09174607095</strong>
+                                                </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Payment Date</div>
+                                                <div class="bd-highlight">
+                                                    <strong>May 19, 2020</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Payment ID</div>
+                                                <div class="bd-highlight">
+                                                    <strong>JP104064</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Payment Amount</div>
+                                                <div class="bd-highlight">
+                                                    <strong>Php 5,000.00</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Payment Method</div>
+                                                <div class="bd-highlight">
+                                                    <strong>Credit Card</strong>
+                                                </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Merchant ID</div>
+                                                <div class="bd-highlight">
+                                                    <strong>JP104064</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Merchant Name</div>
+                                                <div class="bd-highlight">
+                                                    <strong>Reine's Gym</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Merchant Branch</div>
+                                                <div class="bd-highlight">
+                                                    <strong>Reine's Gym Manila</strong>
+                                                </div>
+                                            </div>
+
+                                            <hr>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Settlement Status</div>
+                                                <div class="bd-highlight">
+                                                    <div class="font-weight-600 text-danger text-small">New</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Settlement Proof</div>
+                                                <div class="bd-highlight">
+                                                    <strong>JP104064</strong>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-lg-flex justify-content-between payment-item">
+                                                <div class="bd-highlight">Settlement Date</div>
+                                                <div class="bd-highlight">
+                                                    <strong>May 19, 2020</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Global Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+
+        <script src="assets/modules/popper.js"></script>
+        <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="assets/modules/select2/dist/js/select2.full.min.js"></script>
+        <script src="assets/modules/moment.min.js"></script>
+        <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+        <!-- Template JS File -->
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+        <!-- Global Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/js/intlTelInput.min.js"></script>
+        <script src="../js/search-loc-json.js"></script>
+        <script src="../js/merchant-registration.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>

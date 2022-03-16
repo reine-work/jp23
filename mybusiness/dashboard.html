@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/6.4.1/css/intlTelInput.css">
+
+    <body>
+
+        <div id="app">
+
+            <div class="main-wrapper main-wrapper-1">
+                <nav class="navbar navbar-expand-lg main-navbar">
+                    <form class="form-inline mr-auto">
+                        <ul class="navbar-nav mr-3">
+                            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                        </ul>
+                    </form>
+                    <ul class="navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                <img alt="image" src="../images/others/sample-user.jpg" class="rounded-circle mr-1">
+                                <div class="d-sm-none d-lg-inline-block">John Smith</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mt-2">
+                                <a href="features-settings.html" class="dropdown-item has-icon">
+                                    <i class="fas fa-cog"></i> Settings
+                                </a>
+                                <a href="features-settings.html" class="dropdown-item has-icon">
+                                    <i class="fas fa-cog"></i> Help Center
+                                </a>
+                                <a href="features-settings.html" class="dropdown-item has-icon">
+                                    <i class="fas fa-cog"></i> Go to JazzyPay.com
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item has-icon text-danger">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="main-sidebar sidebar-style-2">
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="../mybusiness/dashboard.html"><img src="assets/img/jazzypay-icon.png" width="30" /></a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a href="../mybusiness/dashboard.html">JP</a>
+                        </div>
+                        <div class="user-widget text-center p-2 mt-5 mb-3">
+                            <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                            <h5 class="mb-0 pb-0">John Smith</h5>
+                            <p>jsmith@email.com</p>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li class="active">
+                                <a class="nav-link" href="dashboard.html">
+                                    <i class="ri-home-2-fill"></i><span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="nav-link has-dropdown" href="view-payments-received.html">
+                                    <i class="ri-briefcase-fill"></i><span>My Businesses</span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="manage-business.html">Manage Businesses</a></li>
+                                    <li><a class="nav-link" href="register-business.html">Register a Business</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="nav-link has-dropdown" href="view-payments-received.html">
+                                    <i class="ri-bank-card-fill"></i><span>Payments</span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="manage-business.html">Manage Payments</a></li>
+                                    <li><a class="nav-link" href="register-business.html">Send Payment Request</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="view-payments-received.html">
+                                    <i class="ri-gift-fill"></i><span>Vouchers</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="view-payments-received.html">
+                                    <i class="ri-group-fill"></i><span>Referrals</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="p-3">
+                            <div class="sharefriends-btn red-marker">
+                                <button class="btn btn-secondary btn-block btn-rg mb-1" data-toggle="modal" data-target="#sharefriends-modal"><strong><i class="las la-dollar-sign"></i> Refer a Friend</strong></button>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <div class="section-header">
+                            <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="ri-menu-line"></i></a>
+                            <h1 class="ml-3">JazzyPay for Business</h1>
+                        </div>
+
+                        <div class="section-body pb-5">
+
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-12">
+                                        <div class="quick-access">
+                                            <div class="quick-action-buttons">
+                                                <h2 class="mb-0">Hi, Merchant!</h2>
+                                                <p>Welcome to your dashboard.</p>
+
+                                                <div class="merchant-alert mt-2">
+                                                    <div class="alert alert-light alert-dismissible fade show" role="alert">
+                                                        <h5 class="alert-heading">Complete your profile</h5>
+                                                        <p>It looks like you're new here. We recommend you complete your business profile to get the most out of the site.</p>
+
+                                                        <div class="mb-2"></div>
+
+                                                        <a href="#" class="btn btn-warning btn-rg">Go to My Business Profile</a>
+
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="merchant-alert mt-2">
+                                                    <div class="alert alert-light alert-dismissible fade show" role="alert">
+                                                        <h5 class="alert-heading">Complete your profile</h5>
+                                                        <p>It looks like you're new here. We recommend you complete your business profile to get the most out of the site.</p>
+
+                                                        <div class="mb-2"></div>
+
+                                                        <a href="#" class="btn btn-warning btn-rg">Go to My Business Profile</a>
+
+                                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="quick-buttons">
+                                                            <a href="#" class="btn btn-link btn-rg mb-1">
+                                                                <span class="qb-icon">
+                                                                    <i class="ri-edit-2-fill"></i>
+                                                                </span>
+                                                                <span class="qb-name">
+                                                                    Register my Business
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="quick-buttons">
+                                                            <a href="#" class="btn btn-link btn-rg mb-1">
+                                                                <span class="qb-icon">
+                                                                    <i class="ri-briefcase-fill"></i>
+                                                                </span>
+                                                                <span class="qb-name">
+                                                                    Manage my Business
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="quick-buttons">
+                                                            <a href="#" class="btn btn-link btn-rg mb-1">
+                                                                <span class="qb-icon">
+                                                                    <i class="ri-send-plane-fill"></i>
+                                                                </span>
+                                                                <span class="qb-name">
+                                                                    Send Payment Request
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                                        <div class="quick-buttons">
+                                                            <a href="#" class="btn btn-link btn-rg mb-1">
+                                                                <span class="qb-icon">
+                                                                    <i class="ri-bank-card-fill"></i>
+                                                                </span>
+                                                                <span class="qb-name">
+                                                                    View Payments
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="referral-buttons">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="dashboard-video mt-3">
+                                            <h5>Video Tutorials</h5>
+                                            <div class="suggested-videos">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="video-item">
+                                                            <img src="../mybusiness/assets/img/video-center/how-to-register-your-business.jpg">
+
+                                                            <div class="video-item-title">
+                                                                <a data-toggle="modal" data-target="#suggVid1"><img src="../mybusiness/assets/img/play-btn-big.png"></a>
+                                                                <p class="mt-0"><strong>How to Register your Business to JazzyPay.com</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="video-item">
+                                                            <img src="../mybusiness/assets/img/video-center/how-to-register-your-business.jpg">
+
+                                                            <div class="video-item-title">
+                                                                <a data-toggle="modal" data-target="#suggVid1"><img src="../mybusiness/assets/img/play-btn-big.png"></a>
+                                                                <p class="mt-0"><strong>How to Register your Business to JazzyPay.com</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="video-item">
+                                                            <img src="../mybusiness/assets/img/video-center/how-to-register-your-business.jpg">
+
+                                                            <div class="video-item-title">
+                                                                <a data-toggle="modal" data-target="#suggVid1"><img src="../mybusiness/assets/img/play-btn-big.png"></a>
+                                                                <p class="mt-0"><strong>How to Register your Business to JazzyPay.com</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade dashboard-video-modal" id="suggVid1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">How to Register your Business to JazzyPay.com</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-video-item">
+                            <div class="embed-responsive embed-responsive-16by9 mt-2 mb-3">
+                                <video controls poster="../mybusiness/assets/img/video-center/how-to-register-your-business.jpg">
+                                <source src="https://jazzypay-v2-public.s3-ap-southeast-1.amazonaws.com/jazzypay_how_to_pay.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                            <p>Through JazzyPay your customers can pay your business from anywhere in the world using vrious payments options such as Credit/Debit Cards, E-wallet, Online Banking and Over-the-Counter.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade dashboard-video-modal" id="suggVid2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">How to Send Payment Requests to your customers via JazzyPay</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-video-item">
+                            <div class="embed-responsive embed-responsive-16by9 mt-2 mb-3">
+                                <video controls poster="../mybusiness/assets/img/video-center/how-to-send-payment-request.jpg">
+                                <source src="https://jazzypay-v2-public.s3-ap-southeast-1.amazonaws.com/jazzypay_how_to_pay.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                            <p>Having trouble reminding your customers about their payments? Use jazzypay.com to send payment requests easily and your customers will be notified via Text and Email instantly!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade dashboard-video-modal" id="suggVid3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">How to Create and Share your Jazzypay Company Page</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-video-item">
+                            <div class="embed-responsive embed-responsive-16by9 mt-2 mb-3">
+                                <video controls poster="../mybusiness/assets/img/video-center/how-to-update-and-share-profile.jpg">
+                                <source src="https://jazzypay-v2-public.s3-ap-southeast-1.amazonaws.com/jazzypay_how_to_pay.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            </div>
+                            <p>Learn how to create and share your own JazzyPay Page in 3 easy steps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="sharefriends-modal" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Refer a Friend</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="refer-tab" data-toggle="tab" href="#referafriend" role="tab" aria-controls="profile" aria-selected="false">Refer a Friend</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="share-tab" data-toggle="tab" href="#sharetofriends" role="tab" aria-controls="home" aria-selected="true">Share to Friends</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+
+                            <div class="tab-pane pb-0 fade show active" id="referafriend" role="tabpanel">
+                                <p><strong>Invite a business and earn cash!</strong></p>
+                                <p>You will receive CASH reward when the company you referred applied to JazzyPay ang gets approved. Please see cash reward pricing below.</p>
+                                <div class="table-responsive">
+                                    <table class="table table-sm table-hover table-striped table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td>Hospitals</td>
+                                                <th scope="row">Php 10,000.00</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Schools</td>
+                                                <th scope="row">Php 5,000.00</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Dental & Medical Supplies</td>
+                                                <th scope="row">Php 1,500.00</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Clinics</td>
+                                                <th scope="row">Php 500.00</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <form>
+                                    <div class="form-group mb-2">
+                                        <label>Company Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                                <label>Contact Person</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-2">
+                                                <label>Position</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label>Email Address</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group mb-2 mobile-input">
+                                        <label>Mobile Number <span class="required-ast">*</span></label>
+
+                                        <div class="mobile-input-field">
+                                            <input type="tel" class="form-control" id="phone">
+                                            <div class="mobile-validation">
+                                                <span id="valid-msg" class="hide"><i class="las la-check-circle"></i> Valid</span>
+                                                <span id="error-msg" class="hide"><i class="las la-times-circle"></i> Invalid</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-0 mt-4 text-right">
+                                        <button type="button" class="btn btn-outline-secondary">Cancel</button>
+                                        <button type="button" class="btn btn-secondary">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane pb-0 fade" id="sharetofriends" role="tabpanel">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Share to social media</label>
+                                        <textarea class="form-control" rows="6" placeholder="Enter caption here"></textarea>
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <ul class="social-icons">
+                                            <li>
+                                                <a target="_blank" href="#"><img src="assets/img/facebook.svg"></a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="#"><img src="assets/img/twitter.svg"></a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="#"><img src="assets/img/linkedin.svg"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Global Scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+        <script src="assets/modules/popper.js"></script>
+        <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="../plugins/mobile/build/js/intlTelInput.min.js"></script>
+
+        <!-- Template JS File -->
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/dashboard-videos.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="../js/mobile-validation.js"></script>
+
+        <!-- Global Scripts -->
+        <script src="../js/script.js"></script>
+    </body>
+
+</html>

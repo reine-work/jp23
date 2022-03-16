@@ -1,0 +1,121 @@
+// media quaries
+@mixin for-phone-landscape {
+    @media (max-width: 767px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-phone-sm {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
+@mixin for-phone {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape {
+    @media (max-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+// variables
+$head-font: 'Inter',
+'Arial',
+sans-serif;
+$body-font: 'Inter',
+'Arial',
+sans-serif;
+$primary-color: #362e8b;
+$accent-color: #7dc242;
+$white: #fff;
+$black: #111;
+// style
+body {
+    font-family: $body-font;
+    text-rendering: optimizeLegibility;
+    font-size: 0.95rem;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out;
+    font-family: $body-font;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.undercons-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    .undercons-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+        @include for-tablet {
+            width: 90%;
+        }
+        h3 {
+            font-weight: 700;
+            color: $primary-color;
+        }
+        p {
+            color: #333;
+            font-size: 12pt;
+            width: 75%;
+            margin: 0 auto;
+            @include for-tablet {
+                width: 90%;
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+ul.social-icons {
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        img {
+            width: 35px;
+        }
+    }
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/modules/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../plugins/mobile/build/css/intlTelInput.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <link rel="stylesheet" href="../css/global.css">
+
+    <body>
+
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <div class="main-sidebar sidebar-style-2">
+
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="../mybusiness/dashboard.html"><img src="assets/img/jazzypay-icon.png" class="mr-2" width="30" />My Business Area</a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a href="../mybusiness/dashboard.html">JP</a>
+                        </div>
+                        <div class="user-widget text-center px-2 py-2 mt-5">
+                            <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                            <h5 class="mb-0 pb-0">John Smith</h5>
+                            <p>jsmith@email.com</p>
+                        </div>
+                        <hr>
+                        <ul class="sidebar-menu">
+                            <li class="menu-header">Starter</li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="las la-briefcase"></i><span>My Business</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="manage-business.html">Manage Business</a></li>
+                                    <li><a class="nav-link" href="register-business.html">Register New Business</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="view-payments-received.html"><i class="las la-credit-card"></i><span>View Payments</span></a></li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="las la-receipt"></i><span>Manage Invoice</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="send-invoice.html">Send Invoice</a></li>
+                                    <li><a class="nav-link" href="view-payments-received.html">View Sent Invoice</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="#"><i class="las la-power-off"></i><span>Log out</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-external-link-alt"></i><span>Go to JazzyPay.com</span></a></li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <div class="section-header">
+                            <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="las la-bars"></i></a>
+                            <h1 class="ml-3">Register New Business</h1>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 col-md-12">
+
+                                    <div id="register-form" class="merchant-area">
+                                        <div class="alert alert-success" role="alert">
+                                            A simple success alert—check it out!
+                                        </div>
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Business category <span class="required-ast">*</span></label>
+                                                <select id="merch-main-categ" class="custom-select"></select>
+                                            </div>
+                                            <div class="form-group">
+                                                <div id="merch-sub-categ"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Company Name <span class="required-ast">*</span></label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Trade Name or DBA <span class="required-ast">*</span></label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Location <span class="required-ast">*</span></label>
+                                                <input type="text" name="search" id="search-loc" placeholder="Enter City or Municipality" class="form-control" />
+
+                                                <ul class="list-group" id="result"></ul>
+
+                                                <input type="text" placeholder="Barangay, Vill/Subd, Street Name, Unit Number, Floor, Etc." class="form-control mt-3" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Authorized Signatory Name <span class="required-ast">*</span></label>
+                                                <input type="text" class="form-control" required>
+                                            </div>
+                                            <div class="form-group multi-email">
+                                                <div>
+                                                    <label>Email Address <span class="required-ast">*</span></label>
+                                                    <div class="mb-2">
+                                                        <input class="form-control" type="email" required />
+                                                    </div>
+                                                </div>
+                                                <div class="add-mobile-field">
+                                                    <span class="add-mobile"><i class="las la-plus-circle"></i> Add email</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Telephone <span class="required-ast">*</span></label>
+                                                <input type="tel" class="form-control">
+                                            </div>
+                                            <div class="form-group mobile-input">
+                                                <label>Mobile Number <span class="required-ast">*</span></label>
+
+                                                <div class="mobile-input-field">
+                                                    <input type="tel" class="form-control" id="phone">
+                                                    <div class="mobile-validation">
+                                                        <span id="valid-msg" class="hide"><i class="las la-check-circle"></i> Valid</span>
+                                                        <span id="error-msg" class="hide"><i class="las la-times-circle"></i> Invalid</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Select Bank <span class="required-ast">*</span></label>
+                                                <select id="merchant-bank" class="custom-select">
+                                                            <option value="">Browse banks...</option>
+                                                        </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Account Type <span class="required-ast">*</span></label>
+                                                <select class="custom-select">
+                                                            <option selected>Browse...</option>
+                                                            <option value="1">Checking</option>
+                                                            <option value="2">Savings</option>
+                                                          </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Account Name <span class="required-ast">*</span></label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Account Number <span class="required-ast">*</span></label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>How did you find out about us?</label>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                                            <label class="custom-control-label" for="customCheck5">Facebook</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                                            <label class="custom-control-label" for="customCheck6">Instagram</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                                            <label class="custom-control-label" for="customCheck7">Google</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                                            <label class="custom-control-label" for="customCheck8">Youtube</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" name="add-referral" id="add-referral">
+                                                            <label class="custom-control-label" for="add-referral">Referral</label>
+                                                        </div>
+
+                                                        <div class="form-group mt-2">
+                                                            <input type="text" class="form-control" name="add-referral-field" placeholder="Referred by:">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>By clicking register, you agree to our <a href="terms.html" target="_blank">Terms and Conditions</a>  and <a href="privacy.html" target="_blank">Privacy Notice</a></label>
+                                            </div>
+                                            <div class="text-right">
+                                                <button type="submit" class="btn btn-primary mt-3">Register</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Global Scripts -->
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+        <script src="assets/modules/popper.js"></script>
+        <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+
+        <!-- Template JS File -->
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/custom.js"></script>
+
+        <!-- Global Scripts -->
+        <script src="../plugins/mobile/build/js/intlTelInput.min.js"></script>
+        <script src="../js/search-loc-json.js"></script>
+        <script src="../js/merchant-registration.js"></script>
+        <script src="../js/mobile-validation.js"></script>
+    </body>
+
+</html>

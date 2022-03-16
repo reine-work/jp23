@@ -1,0 +1,550 @@
+// media quaries
+@mixin for-phone-landscape {
+    @media (max-width: 767px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-phone-sm {
+    @media (max-width: 360px) {
+        @content;
+    }
+}
+
+@mixin for-phone {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media (max-width: 834px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape {
+    @media (max-width: 1024px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin for-desktop-md {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) {
+        @content;
+    }
+}
+
+// variables
+$head-font: 'Inter',
+'Arial',
+sans-serif;
+$body-font: 'Inter',
+'Arial',
+sans-serif;
+$primary-color: #362e8b;
+$accent-color: #7dc242;
+$white: #fff;
+$black: #111;
+// style start
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #bbb;
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #bbb;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #bbb;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+// custom checbox
+.custom-checkbox {
+    position: relative;
+}
+
+.custom-checkbox input {
+    visibility: hidden;
+    margin-right: 8px;
+}
+
+.custom-label:before,
+.custom-label:after {
+    width: 16px;
+    height: 16px;
+    content: "";
+    border: 1px solid;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    border: #adb5bd solid 1px;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border-radius: .25rem;
+}
+
+.custom-checkbox input:checked+.custom-label:before {
+    border-color: $primary-color;
+    background-color: $primary-color;
+}
+
+.custom-checkbox input:checked+.custom-label:after {
+    width: 4px;
+    border: 2px solid #ffffff;
+    height: 8px;
+    border-top: none;
+    border-left: none;
+    transform: rotate(40deg);
+    left: 6px;
+    top: 7px;
+}
+
+// required indicator
+.required-ast {
+    color: #f00;
+}
+
+// flag in address
+.adr-flag {
+    margin-right: 6px;
+    img {
+        width: 30px;
+        border: solid 1px #eee;
+    }
+}
+
+// login & register
+.login-switcher {
+    padding-top: 0.5rem;
+    border-top: dotted 1px #999;
+    text-align: center;
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
+    }
+    .social-login {
+        margin-top: 0.75rem;
+    }
+}
+
+.login-password {
+    position: relative;
+    .pass-toggler {
+        font-size: 0.8rem;
+        font-weight: 400;
+        position: absolute;
+        top: 45px;
+        right: 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// password validation
+#password-message {
+    display: none;
+    border: solid 1px #ced4da;
+    background: #fafafa;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 6px;
+    @include for-phone {
+        padding: 1rem;
+    }
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+        font-weight: 400;
+        @include for-phone {
+            font-size: 0.8rem;
+        }
+    }
+    span {
+        padding: 0;
+        margin: 2px 0;
+        display: block;
+        font-size: 0.9rem;
+        @include for-phone {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.valid-pass {
+    color: $accent-color;
+}
+
+.valid-pass:before {
+    position: relative;
+    left: 0;
+    margin-right: 6px;
+    content: "✔";
+}
+
+.invalid-pass {
+    color: #dc3545;
+}
+
+.invalid-pass:before {
+    position: relative;
+    left: 0;
+    margin-right: 6px;
+    content: "ⓘ";
+}
+
+.valid-mobile {
+    color: $accent-color;
+}
+
+.valid-mobile:before {
+    position: relative;
+    left: 0;
+    margin-right: 6px;
+    content: "✔";
+}
+
+.invalid-mobile {
+    color: #dc3545;
+}
+
+.invalid-mobile:before {
+    position: relative;
+    left: 0;
+    margin-right: 6px;
+    content: "ⓘ";
+}
+
+// search location, will delete this in the future
+#description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: $white;
+    font-family: Roboto;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-input {
+    background-color: $white;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+#title {
+    color: $white;
+    background-color: #4d90fe;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+#target {
+    width: 100%;
+}
+
+// upload merchant requirements
+.req-form {
+    .req-item {
+        background: $white;
+        padding: 0.75rem 1rem;
+        border: solid 1px #e4e6fc;
+        border-radius: 4px;
+        span.uploaded {
+            color: $accent-color;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        span.upload {
+            color: $primary-color;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        span.reupload {
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        span.review {
+            color: $primary-color;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        span.declined {
+            color: #f00;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .file-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            @include for-tablet {
+                padding-bottom: 0.5rem;
+                margin-bottom: 0.5rem;
+                border-bottom: solid 1px #ced4da;
+                display: block;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        .reupload {
+            margin-right: 8px;
+        }
+        i {
+            font-size: 16px;
+        }
+    }
+}
+
+// location result
+#result {
+    position: absolute;
+    width: 100%;
+    max-width: 456px;
+    cursor: pointer;
+    overflow-y: auto;
+    max-height: 400px;
+    box-sizing: border-box;
+    z-index: 1000;
+    .list-group-item {
+        font: 0.9rem;
+        padding: 0.5rem 1rem;
+        .region-name {
+            font-size: 0.8rem;
+            color: #999;
+        }
+    }
+}
+
+.link-class:hover {
+    background-color: #f1f1f1;
+}
+
+// mobile number validation
+.hide {
+    display: none;
+}
+
+#valid-msg {
+    color: green;
+    font-size: 0.8rem;
+}
+
+#error-msg {
+    color: #f00;
+    font-size: 0.8rem;
+}
+
+.mobile-input-field {
+    position: relative;
+    .mobile-validation {
+        position: absolute;
+        top: 6px;
+        right: 15px;
+    }
+}
+
+.intl-tel-input {
+    width: 100%;
+}
+
+.intl-tel-input input,
+.intl-tel-input input[type=text],
+.intl-tel-input input[type=tel] {
+    width: 100%;
+}
+
+span.del-mobile {
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #dc3545;
+    margin-top: 4px;
+}
+
+.multi-email {
+    position: relative;
+    .add-mobile-field {
+        position: absolute;
+        top: 0;
+        right: 0;
+        span.add-mobile {
+            font-size: 0.8rem;
+            cursor: pointer;
+            color: green;
+        }
+    }
+}
+
+// payment details
+.payment-breakdown {
+    background: $white;
+    border: solid 1px #ced4da;
+    padding: 1rem;
+    border-radius: 6px;
+    .fee-tol {
+        padding-top: 1rem;
+        margin-top: 1rem;
+        border-top: solid 1px #ced4da;
+        .tol {
+            color: #dc3545;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// social icons
+ul.social-icons {
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        img {
+            width: 40px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+#contact-form,
+#register-form,
+#payment-form {
+    padding: 2.5rem;
+    background: $white;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    @include for-tablet {
+        padding: 2rem 1.5rem;
+    }
+    @include for-phone-sm {
+        padding: 1rem 1.5rem;
+    }
+}
+
+#contact-form {
+    @include for-phone {
+        margin-top: 2rem;
+    }
+}
+
+// merchant area
+.merchant-area {
+    border: solid 2px $accent-color;
+    border-radius: 6px;
+}
+
+.error {
+    border-color: #f00;
+    color: #f00;
+}
+
+ul.content-list {
+    padding-left: 1rem !important;
+    li {
+        list-style: square;
+        font-size: 0.9rem;
+    }
+}
+
+.intl-tel-input.allow-dropdown .selected-flag,
+.intl-tel-input .selected-flag {
+    height: 35px !important;
+}

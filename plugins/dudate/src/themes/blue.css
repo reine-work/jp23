@@ -1,0 +1,32 @@
+.dudp__wrapper[data-theme='blue'] .dudp__calendar-header {
+  background-color: #1565c0;
+}
+
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.current {
+  color: #1976d2;
+}
+
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.in-range,
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.range-from,
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.range-to {
+  background-color: rgba(25, 118, 210, 0.2);
+}
+
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.selected:before,
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.range-from:before,
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.range-to:before {
+  background-color: #1976d2;
+}
+
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.selected:hover:before,
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.range-from:hover:before,
+.dudp__wrapper[data-theme='blue'] .dudp__calendar .dudp__cal-week .dudp__date.range-to:hover:before {
+  background-color: #0d47a1;
+}
+
+.dudp__wrapper[data-theme='blue'] .dudp__buttons .dudp__button,
+.dudp__wrapper[data-theme='blue'] .dudp__months-view .dudp__month.selected,
+.dudp__wrapper[data-theme='blue'] .dudp__years-view .dudp__year.selected {
+  color: #0d47a1;
+}
+/*# sourceMappingURL=blue.css.map */

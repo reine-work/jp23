@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="icon" href="images/misc/jazzypay-favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+
+</head>
+
+<title>JazzyPay - Secure Online Payments</title>
+
+<body>
+
+    <header>
+    </header>
+
+    <section>
+        <div class="login-container">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-7">
+                        <div class="login-banner">
+                            <h2>Become a JazzyPay merchant to experience the benefits of our unified cashless payment system.</h2>
+                            <div class="app-btn">
+                                <a href="https://apps.apple.com/us/app/jazzypay/id1250715169" target="_blank"><img src="images/others/download-app-store.svg" /></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.jazzypay.androapp&hl=en" target="_blank"><img src="images/others/download-play-store.svg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div>
+                            <a href="#">
+                                <img src="images/misc/logo-jazzypay-color-vector.svg" width="200" />
+                            </a>
+                            <div class="my-5">
+                                <h2><strong>Sign up with JazzyPay</strong></h2>
+                                <p>Already a member? <a href="#">Sign in here.</a></p>
+                            </div>
+                            <form>
+                                <div class="form-group">
+                                    <label>Password <span class="required-ast">*</span></label>
+                                    <input type="password" class="form-control" id="user-password" name="user-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                </div>
+                                <div id="password-message">
+                                    <p class="mb-2">Your password must contain the following:</p>
+                                    <span id="pw-length" class="invalid">8 characters or more</span>
+                                    <span id="pw-number" class="invalid">At least 1 numeric (0-9)</span>
+                                    <span id="pw-letter" class="invalid">At least lowercase letter (a-z)</span>
+                                    <span id="pw-capital" class="invalid">At least 1 uppercase letter (A-Z)</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirm Password <span class="required-ast">*</span></label>
+                                    <input type="password" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>By clicking register, you agree to our <a href="terms.html" target="_blank">Terms and Conditions</a>  and <a href="privacy.html" target="_blank">Privacy Policy</a></label>
+                                </div>
+                                <div class="pt-5">
+                                    <a class="btn btn-primary btn-block mt-3 mb-3" href="user-my-profile.html">Continue</a>
+                                    <a class="btn btn-light btn-block mt-3 mb-3" href="user-register-1.html">Back</a>
+                                </div>
+                            </form>
+
+                            <div class="text-center">
+                                <p>or</p>
+
+                                <div class="social-login">
+                                    <button class="btn btn-block login-fb">Continue with Facebook</button>
+                                    <button class="btn btn-block login-go">Continue with Google</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+    </footer>
+
+    <!-- <div id="top">
+        <img src="images/misc/top.png" />
+    </div> -->
+
+    <!-- Plugins -->
+
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/password-validation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>My Business Area | JazzyPay Inc.</title>
+
+    <!-- Global CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/modules/datatables/datatables.min.css" />
+
+    <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/modules/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/modules/select2/dist/css/select2.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <body>
+
+        <div id="app">
+            <div class="main-wrapper main-wrapper-1">
+                <div class="main-sidebar sidebar-style-2">
+
+                    <aside id="sidebar-wrapper">
+                        <div class="sidebar-brand">
+                            <a href="../admin/dashboard.html">
+                                <img src="assets/img/jazzypay-icon.png" width="30" />
+                                <span>Admin Area</span>
+                            </a>
+                        </div>
+                        <div class="sidebar-brand sidebar-brand-sm">
+                            <a href="../admin/dashboard.html">JP</a>
+                        </div>
+                        <div class="user-widget text-center px-2 py-2 mt-5">
+                            <img src="../images/others/sample-user.jpg" width="100" class="rounded-circle mb-3" />
+                            <h5 class="mb-0 pb-0">John Smith</h5>
+                            <p>jsmith@email.com</p>
+                        </div>
+                        <ul class="sidebar-menu">
+                            <li><a class="nav-link" href="dashboard.html"><i class="las la-rocket"></i><span>Dashboard</span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link has-dropdown"><i class="las la-user"></i><span>Account Settings</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="nav-link" href="change-password.html">Change Password</a></li>
+                                    <li><a class="nav-link" href="update-profile.html">Update Profile</a></li>
+                                    <li><a class="nav-link" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <li class="active"><a class="nav-link" href="manage-admin.html"><i class="las la-user-cog"></i><span>Manage Admins</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-comment"></i><span>Manage Contact</span></a></li>
+                            <li><a class="nav-link" href="#"><i class="las la-store-alt"></i><span>Manage Merchants</span></a></li>
+                        </ul>
+
+                    </aside>
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="main-content">
+                    <section class="section">
+                        <div class="section-header">
+                            <a href="#" data-toggle="sidebar" class="d-lg-none sidebar-toggle"><i class="las la-bars"></i></a>
+                            <h1 class="ml-3">Manage Merchant</h1>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+
+                                    <div class="card merchant-det">
+                                        <div class="card-header">
+                                            <div class="d-flex">
+                                                <div class="mr-auto">
+                                                    <h5 class="card-title">Registration Details</h5>
+                                                </div>
+                                                <div>
+                                                    <div class="text-right">
+                                                        <div class="form-group mb-0">
+                                                            <select class="custom-select">
+                                                                <option>Approved</option>
+                                                                <option>Pending</option>
+                                                                <option>Declined</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="media">
+                                                <img src="../admin/assets/img/dummy-logo1.svg" class="rounded border p-2 align-self-start mr-3" width="100">
+                                                <div class="media-body">
+                                                    <h5 class="mt-0 mb-0">Happy Dental Inc.</h5>
+                                                    <p>Pasig City, National Capital Region</p>
+                                                    <span class="badge badge-warning">Pending</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <form class="mt-4">
+                                                        <div class="form-group">
+                                                            <label>Category</label>
+                                                            <input type="text" class="form-control" value="Clinics" disabled>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Sub-category</label>
+                                                            <input type="text" class="form-control" value="Dental Clinic" disabled>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Company Name</label>
+                                                            <input type="text" class="form-control" value="Happy Dental Inc." disabled>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Trade Name or DBA</label>
+                                                            <input type="text" class="form-control" value="Happy Dental Inc." disabled>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Location</label>
+                                                            <input type="text" class="form-control" value="Pasig City, National Capital Region" disabled>
+                                                        </div>
+                                                        <div class="form-group mb-0">
+                                                            <label>Telephone</label>
+                                                            <input type="text" class="form-control" value="8765-4321" disabled>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="mt-4"></div>
+                                                    <div class="form-group mb-0">
+                                                        <label>Uploaded Documents</label>
+                                                    </div>
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item merchant-docs">
+                                                            <div class="d-flex d-lg-flex">
+                                                                <div class="mr-auto">
+                                                                    <div class="media">
+                                                                        <img src="../admin/assets/img/pdf.png" class="align-self-start mr-3" width="40" data-toggle="modal" data-target="#view-doc">
+                                                                        <div class="media-body">
+                                                                            <span class="d-block my-0 py-0">Company Logo</span>
+                                                                            <span class="d-block my-0 py-0"><strong>mycompanylogo.jpg</strong></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="form-group mb-0">
+                                                                        <select class="custom-select">
+                                                                            <option>Approved</option>
+                                                                            <option>Re-upload</option>
+                                                                            <option>Declined</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item merchant-docs">
+                                                            <div class="d-flex d-lg-flex">
+                                                                <div class="mr-auto">
+                                                                    <div class="media">
+                                                                        <img src="../admin/assets/img/pdf.png" class="align-self-start mr-3" width="40" data-toggle="modal" data-target="#view-doc">
+                                                                        <div class="media-body">
+                                                                            <span class="d-block my-0 py-0">Company Logo</span>
+                                                                            <span class="d-block my-0 py-0"><strong>mycompanylogo.jpg</strong></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="form-group mb-0">
+                                                                        <select class="custom-select">
+                                                                            <option>Approved</option>
+                                                                            <option>Re-upload</option>
+                                                                            <option>Declined</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item merchant-docs">
+                                                            <div class="d-flex d-lg-flex">
+                                                                <div class="mr-auto">
+                                                                    <div class="media">
+                                                                        <img src="../admin/assets/img/pdf.png" class="align-self-start mr-3" width="40" data-toggle="modal" data-target="#view-doc">
+                                                                        <div class="media-body">
+                                                                            <span class="d-block my-0 py-0">Company Logo</span>
+                                                                            <span class="d-block my-0 py-0"><strong>mycompanylogo.jpg</strong></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="form-group mb-0">
+                                                                        <select class="custom-select">
+                                                                            <option>Approved</option>
+                                                                            <option>Re-upload</option>
+                                                                            <option>Declined</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item merchant-docs">
+                                                            <div class="d-flex d-lg-flex">
+                                                                <div class="mr-auto">
+                                                                    <div class="media">
+                                                                        <img src="../admin/assets/img/pdf.png" class="align-self-start mr-3" width="40" data-toggle="modal" data-target="#view-doc">
+                                                                        <div class="media-body">
+                                                                            <span class="d-block my-0 py-0">Company Logo</span>
+                                                                            <span class="d-block my-0 py-0"><strong>mycompanylogo.jpg</strong></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="form-group mb-0">
+                                                                        <select class="custom-select">
+                                                                            <option>Approved</option>
+                                                                            <option>Re-upload</option>
+                                                                            <option>Declined</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item merchant-docs">
+                                                            <div class="d-flex d-lg-flex">
+                                                                <div class="mr-auto">
+                                                                    <div class="media">
+                                                                        <img src="../admin/assets/img/pdf.png" class="align-self-start mr-3" width="40" data-toggle="modal" data-target="#view-doc">
+                                                                        <div class="media-body">
+                                                                            <span class="d-block my-0 py-0">Company Logo</span>
+                                                                            <span class="d-block my-0 py-0"><strong>mycompanylogo.jpg</strong></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="form-group mb-0">
+                                                                        <select class="custom-select">
+                                                                            <option>Approved</option>
+                                                                            <option>Re-upload</option>
+                                                                            <option>Declined</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item merchant-docs">
+                                                            <div class="d-flex d-lg-flex">
+                                                                <div class="mr-auto">
+                                                                    <div class="media">
+                                                                        <img src="../admin/assets/img/pdf.png" class="align-self-start mr-3" width="40" data-toggle="modal" data-target="#view-doc">
+                                                                        <div class="media-body">
+                                                                            <span class="d-block my-0 py-0">Company Logo</span>
+                                                                            <span class="d-block my-0 py-0"><strong>mycompanylogo.jpg</strong></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="form-group mb-0">
+                                                                        <select class="custom-select">
+                                                                            <option>Approved</option>
+                                                                            <option>Re-upload</option>
+                                                                            <option>Declined</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-footer d-lg-flex mt-3">
+                                            <div>
+                                                <button type="button" class="btn btn-rg btn-light" data-toggle="modal" data-target="#modal-reassign">Re-assign Account</button>
+                                            </div>
+                                            <div class="ml-auto">
+                                                <button type="button" class="btn btn-rg btn-light">Cancel</button>
+                                                <button type="button" class="btn btn-rg btn-secondary">Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-reassign" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Reassign Hello Tech to another user</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="mt-3">
+                            <div class="form-group">
+                                <label>Current user</label>
+                                <input type="text" class="form-control" value="UID-11014792 - Reine Aguila" disabled>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label>New user *</label>
+                                <select class="form-control reassignuser" required>
+                                    <option selected></option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                    <option>Option 3</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-secondary">Re-assign Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="view-doc" tabindex="-1" role="dialog" aria-labelledby="view-docLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="view-docLabel">Company Logo - mycompanylogo.pdf</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe src="https://docs.google.com/viewerng/viewer?url=http://infolab.stanford.edu/pub/papers/google.pdf&embedded=true" frameborder="0" height="600px" width="100%">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Global Scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <script src="assets/modules/popper.js"></script>
+        <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="assets/modules/datatables/datatables.min.js"></script>
+        <script src="assets/modules/select2/dist/js/select2.min.js"></script>
+
+        <!-- Template JS File -->
+        <script src="assets/js/datatable-setting.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/reassign-user.js"></script>
+
+    </body>
+
+</html>
